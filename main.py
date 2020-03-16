@@ -148,6 +148,8 @@ if smiley_or_not==1:
 			y[i] = 0
 
 
+
+
 # On regarde le min et le max dans chaque dimensions
 minimums = np.min(X,axis=0) # taille n, c'est le min dans chaque variables continues
 maximums = np.max(X,axis=0) # taille n, c'est le max dans chaque variables continues
@@ -318,7 +320,7 @@ for test_number in range(nombre_de_tests):
 					y_max = maximums_y[-1]
 					extent=[x_min,x_max,y_max,y_min]
 					# Horizontalement c'est la colonne 1, verticalement c'est la colonne 0
-					cMap = ListedColormap(['blue', 'red', 'blue','red'])
+					cMap = ListedColormap(['blue', 'red']) # 0:bleu, 1:rouge
 					if smiley_or_not==0:
 						plt.scatter(x=X[:,1],y=X[:,0],c=y,s=0.5,cmap=cMap,alpha = 100*ncnv/m)
 					if smiley_or_not==1:
